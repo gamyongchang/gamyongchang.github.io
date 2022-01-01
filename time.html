@@ -1,0 +1,39 @@
+---
+title: 时间点♠
+layout: page
+---
+
+<div id="dd" style="text-align:center;"></div>
+<script type="text/javascript">
+	// 初始时间，月/日/年 时:分:秒
+		MSPD = 86400000;
+		now = new Date();
+		var OPS = "";
+		var dates = [
+			new Date("6/7/2021"),
+			new Date("12/11/2021"),
+			new Date("12/22/2021"),
+			new Date("2/17/2022")
+		];
+		var events = [
+			"高考",
+			"建站",
+			"放假",
+			"开学"
+		];
+		for(var i = 0; i < dates.length; i++) {
+			if(now.getTime() > dates[i].getTime()){                      //如果该事件处于以前的位置
+				MSS = now.getTime()- dates[i].getTime();               //获取现在和目的日期相差毫秒数
+				Days = MSS / MSPD;                                       //除以一天中的86400000毫秒，转化为天数
+				Day_out = Math.floor(Days);
+				OPS += "距离" + events[i] + "已经过去" + Day_out + "天<br/>";
+			}
+			else{				//如果该事件还未发生
+				MSS = dates[i].getTime() - now.getTime()
+				Days = MSS / MSPD;
+				Day_out = Math.floor(Days);
+				OPS += "距离" + events[i] + "还有" + Day_out + "天\n<br/>";
+			}
+		}
+		dd.innerHTML = OPS;
+</script>

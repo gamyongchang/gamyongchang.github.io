@@ -1,0 +1,10 @@
+title: 天外之音
+description: てんがいのおと Voice of TATO
+author: GamyongChang
+permalink: /:title.html/
+url: https://gamyongchang.github.io
+paginate: 7
+paginate_path: "/page:num"
+repo: gamyongchang.github.io
+owner: gamyongchang
+
