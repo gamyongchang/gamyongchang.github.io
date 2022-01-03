@@ -8,3 +8,6 @@ paginate_path: "/page:num"
 repo: gamyongchang.github.io
 owner: gamyongchang
 
+markdown: redcarpet
+redcarpet:
+    extensions: ["tables"]
