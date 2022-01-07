@@ -3,7 +3,7 @@ description: てんがいのおと Voice of TATO
 author: GamyongChang
 permalink: /:title.html/
 url: https://gamyongchang.github.io
-paginate: 1
+paginate: 8
 paginate_path: "/page:num"
 repo: gamyongchang.github.io
 owner: gamyongchang
