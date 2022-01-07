@@ -14,9 +14,9 @@ layout: default
 	{% if paginator.total_pages > 1 %} <!-- 如果可以文章够分页 -->
 	<div class="pagination"> <!-- 引入分页器 -->
 	  {% if paginator.previous_page %} <!-- 如果存在上一页，激活前一页按钮 -->
-	    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+	    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">← Prev</a>
 	  {% else %}
-	    <span>&laquo; Prev</span>
+	    <span>← Prev</span>
 	  {% endif %}
 
 	  {% for page in (1..paginator.total_pages) %} <!-- 展示所有分页编号 -->
@@ -30,9 +30,9 @@ layout: default
 	  {% endfor %}
 
 	  {% if paginator.next_page %} <!-- 如果存在上一页，激活下一页按钮 -->
-	    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+	    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next →</a>
 	  {% else %}
-	    <span>Next &raquo;</span>
+	    <span>Next →</span>
 	  {% endif %}
 	</div>
 	{% endif %}
