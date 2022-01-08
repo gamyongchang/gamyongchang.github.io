@@ -7,7 +7,7 @@ layout: default
 		<h3 class="post-title"><a href="{{ site.url }}{{ post.url }}" class="post-link">{{ post.title }}</a></h3>
 		<div class="post-card-content">
 			<p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-			<p class="post-info-index"><i class="fa fa-clock-o"></i> {{ post.date | date: "%Y-%m-%d" }}　 <i class="fa fa-folder bluk"></i> {{ post.category }}　|　共 {{ post.content | strip_html | strip_newlines | remove: " " | size }} 字</p>
+			<p class="post-info-index"><i class="fa fa-clock-o"></i> {{ post.date | date: "%Y-%m-%d" }} / {{ post.last-modified-date | date: '%B %d, %Y' }}　 <i class="fa fa-folder bluk"></i> {{ post.category }}　|　共 {{ post.content | strip_html | strip_newlines | remove: " " | size }} 字</p>
 		</div>
 	</div>
  {% endfor %}
